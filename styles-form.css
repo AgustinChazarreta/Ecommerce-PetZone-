@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -48,6 +52,36 @@ img.user-icon {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+}
+
+footer {
+    font-family: sans-serif;
+    color: #F6FCDF;
+    background: linear-gradient(to top, #222, #31511E);
+    padding-top: 20px; /* Controla el espacio superior e inferior del footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Elimina el espacio entre h4 y .info-footer */
+}
+
+h4 {
+    margin: 0; /* Elimina el margen predeterminado del h4 */
+    font-size: 20px;
+}
+
+.info-footer {
+    margin: 0; /* Asegura que no haya margen superior o inferior */
+    padding: 0 30px; /* Solo aplica padding lateral si es necesario */
+    text-align: center; /* Centra el texto dentro de .info-footer */
+    text-wrap: balance;
+}
+
+.ultimo-footer{
+    padding: 5px;
+    background-color: #32382f;
+    text-align: center;
+    width: 100%; /* Abarca toda la pantalla */
 }
 
 h2 {
