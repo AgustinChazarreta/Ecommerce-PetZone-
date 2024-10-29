@@ -4,19 +4,20 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Montserrat";
     color: #eee;
-    background: linear-gradient(to bottom,#222,#000);
+    background: #fff;
 }
 
+/*HEADER*/
 .container {
     align-items: center;
     justify-content: space-between;
     display: flex;
     padding: 0 20px;
-    background-color: #31511E;
-    color: #F6FCDF;
-    font-family: sans-serif;
+    background-color: #368cdf;
+    color: #fff;
+    font-family: "Montserrat";
     
 }
 
@@ -31,21 +32,30 @@ body {
     gap: 25px; /* Espacio entre los elementos dentro de .header-logo */
 }
 
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+}
+
 .user-info {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* Icono de Usuario */
 .fi {
     font-size: 24px; /* Ajusta el tamaño */
-    color: #F6FCDF; /* Cambia el color */
+    color: #fff; /* Cambia el color */
 }
 
 img.logo-icon {
     width: 50px;
     height: 50px;
     margin-left: 15px;
+    border-color: #fff;
+    border-style: solid;
+    border-radius: 100%;
 }
 
 img.user-icon {
@@ -54,59 +64,33 @@ img.user-icon {
     margin-right: 10px;
 }
 
-footer {
-    font-family: sans-serif;
-    color: #F6FCDF;
-    background: linear-gradient(to top, #222, #31511E);
-    padding-top: 20px; /* Controla el espacio superior e inferior del footer */
+main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0; /* Elimina el espacio entre h4 y .info-footer */
-}
-
-h4 {
-    margin: 0; /* Elimina el margen predeterminado del h4 */
-    font-size: 20px;
-}
-
-.info-footer {
-    margin: 0; /* Asegura que no haya margen superior o inferior */
-    padding: 0 30px; /* Solo aplica padding lateral si es necesario */
-    text-align: center; /* Centra el texto dentro de .info-footer */
-    text-wrap: balance;
-}
-
-.ultimo-footer{
-    padding: 5px;
-    background-color: #32382f;
-    text-align: center;
-    width: 100%; /* Abarca toda la pantalla */
+    justify-content: space-around;
 }
 
 h2 {
-    text-align: center;
     margin: 0;
     margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 1.4em;
     padding: 10px;
+    color: #000;
 }
 
 form {
     background: transparent;
     padding: 10px 30px;
     max-width: 600px;
-    margin: auto;
     box-shadow: 0 0 25px #0008;
     margin-top: 20px;
     margin-bottom: 40px;
+    border-radius: 2%;
 }
 
 .form_input {
     padding: 6px 0;
-    
+    color: #000;
 }
 
 input, textarea, select {
@@ -118,11 +102,12 @@ input, textarea, select {
     box-shadow: 0 0 15px #0003;
     background: transparent;
     border-radius: 4px;
-    color: #eee;
+    color: #000;
+    font-family: "Montserrat";
 }
 
 option {
-    background-color: #222;
+    background-color: #000;
     
 }
 
@@ -130,7 +115,6 @@ textarea {
     min-width: 100%;
     resize: none;
     min-height: 100px;
-    font-family: sans-serif;
 }
 
 label {
@@ -152,5 +136,51 @@ fieldset {
 
 legend {
     padding: 0 6px;
-    color: #ddd;
+    color: #000;
+}
+
+.mapa {
+    background: transparent;
+    padding: 10px 30px;
+    max-width: 600px;
+    box-shadow: 0 0 25px #0008;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 2%;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    font-family: "Montserrat";
+    color: #fff;
+    background: linear-gradient(to top, #222, #368cdf);
+    padding-top: 20px; /* Controla el espacio superior e inferior del footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Elimina el espacio entre h4 y .info-footer */
+}
+
+h4 {
+    margin: 0; /* Elimina el margen predeterminado del h4 */
+    font-size: 20px;
+}
+
+.info-footer {
+    margin: 0; /* Asegura que no haya margen superior o inferior */
+    padding: 0 30px; /* Solo aplica padding lateral si es necesario */
+    text-align: center; /* Centra el texto dentro de .info-footer */
+    text-wrap: balance;
+    font-size: 12px;
+}
+
+.ultimo-footer{
+    padding: 5px;
+    background-color: #40463c;
+    text-align: center;
+    width: 100%; /* Abarca toda la pantalla */
+    font-size: 12px;
 }
