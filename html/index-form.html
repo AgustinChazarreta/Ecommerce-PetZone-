@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> PetZone</title>
-    <link rel="stylesheet" href="styles-form.css">
     <link rel="icon" href="PetZone.png" type="image/png">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 <body>
     <header class="container">
         <div class="header-logo item">
-            <img src="PetZone.png" alt="Logo de la web PetZone" class="logo-icon">
+            <img src="../img/PetZone.png" alt="Logo de la web PetZone" class="logo-icon">
             <h1>PetZone</h1>
         </div>
         <div class="user-info item">
@@ -23,11 +26,11 @@
     </header>
 
     <main>
-        <form class="form">
-            <h2>Envíanos un mensaje</h2>
+        <form class="formulario">
+            <h2>Envianos un mensaje</h2>
         
             <fieldset>
-                <legend> INFORMACIÓN BÁSICA</legend>
+                <legend> Información de contacto</legend>
                 <!-- SIMPLE IMPUTS-->
                 <div class="form_input">
                     <label>Nombre completo
@@ -37,6 +40,10 @@
                 <div class="form_input">
                     <label for="email">Email</label>
                     <input type="email" placeholder="ejemplo@gmail.com" id="email">
+                </div>
+                <div class="form_input">
+                    <label>Teléfono</label>
+                    <input type="telefono" placeholder="555-555-5555" id="telefono">
                 </div>
             </fieldset>
 
@@ -51,13 +58,19 @@
                 </label>
             </div>
         </form>
+
         <section>
             <div class="mapa">
-                <h2>Sucursales</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur illum, minus perspiciatis quidem fuga quis error autem quisquam quia repellendus atque fugiat earum mollitia ullam recusandae odit accusamus blanditiis commodi veritatis ab, adipisci repellat nisi porro. Ad voluptatum facere natus sed animi modi, placeat iure ipsam corrupti iusto veniam nisi quaerat suscipit quod alias provident porro, maiores mollitia voluptatem atque inventore? Iure nisi ratione, ab est doloribus odio illo eveniet deserunt adipisci provident. Dignissimos eum perferendis sequi dolore inventore placeat pariatur accusantium ullam quaerat deleniti blanditiis, est laudantium aut voluptatibus minus quae voluptatum modi quod eveniet facere dicta consequatur reiciendis? Saepe animi doloribus velit. Excepturi natus pariatur non officia a eaque autem quae? Enim natus fugit ab modi temporibus? Perspiciatis, sed, aliquam beatae eos numquam quae vel alias nemo neque suscipit nulla ab possimus eum dolorem ducimus quis. Adipisci veniam iste ratione ipsa praesentium nisi eius eos ut officia. Sequi.</p>
+                <h2>Sucursal</h2>
+                <a><i class="fi fi-rr-marker"></i>Av. Hipólito Yrigoyen 402, Cdad. Autónoma de Buenos Aires</a>
+                <a><i class="fi fi-brands-whatsapp"></i>WhatsApp: 555-555-5555</a>
+                <a><i class="fi fi-brands-instagram"></i>Instagram: Pet.Zone.Shop</a>
+                <a><i class="fi fi-rr-envelope"></i>Email: contacto@petzone.com</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6567.723740308096!2d-58.37319374098478!3d-34.607654225157354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccadb57fd1e5f%3A0xcc737c4eb0a8614b!2sPlaza%20de%20Mayo!5e0!3m2!1ses!2sar!4v1730297738612!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
+
     <footer>
         <h4>PetZone</h4>
         <div class="info-footer">
