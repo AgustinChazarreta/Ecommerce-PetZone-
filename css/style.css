@@ -120,7 +120,7 @@ h2 {
 input, textarea, select {
     width: 100%;
     box-sizing: border-box;
-    margin: 10px;
+    margin: 8px;
     padding: 6px 8px;
     border: 1px solid #555;
     box-shadow: 0 0 15px #0003;
@@ -161,6 +161,19 @@ legend {
     padding: 0 6px;
     color: #000;
     font-size: larger;
+}
+
+.boton {
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff; /* Azul Bootstrap */
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .mapa {
