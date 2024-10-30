@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: "Montserrat";
     color: #eee;
     background: #fff;
 }
@@ -17,8 +17,6 @@ body {
     padding: 0 20px;
     background-color: #368cdf;
     color: #fff;
-    font-family: "Montserrat";
-    
 }
 
 .item {
@@ -66,7 +64,7 @@ img.user-icon {
 
 /*FORMULARIO Y MAPA*/
 
-main {
+.contacto {
     display: flex;
     justify-content: space-around;
     margin-top: 25px;
@@ -106,7 +104,6 @@ input, textarea, select {
     background: transparent;
     border-radius: 4px;
     color: #000;
-    font-family: "Montserrat";
 }
 
 option {
@@ -175,14 +172,46 @@ legend {
     margin-right: 10px;
 }
 
-/*Agrego una media Query*/
+/*Agrego media Query*/
+
 @media (max-width: 600px) {
-    main {
-        flex-direction: column;
-        margin: 15px;
+    h1 {
+        font-size: 35px;
+    }
+
+    .user-info {
+        font-size: 10px;
     }
 }
 
+@media (max-width: 1200px) {
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .formulario {
+        max-width: 800px;
+        width: 80%;
+    }
+
+    .mapa {
+        max-width: 800px;
+        width: 80%;
+    }
+
+    body {
+        min-width: 570px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacto {
+        flex-direction: row;
+        margin: 15px;
+    }
+}
 
 /*FOOTER*/
 
