@@ -10,7 +10,7 @@ body {
 }
 
 /*HEADER*/
-.container {
+.container-web {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,6 +35,7 @@ h1{
     color: white;
     font-size: 50px;
     font-weight: 800;
+    padding-top: 5px;
 }
 
 .user-info {
@@ -64,18 +65,17 @@ img.user-icon {
 }
 
 /*NAV-BAR*/
-
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 8px 20px;
     background-color: #2f7bc3;
 }
 
 .nav-bar .item {
     color: white;
-    padding: 18px 15px;
+    padding: 18px 15px !important;
     text-decoration: none;
     max-height: 45px;
     border-radius: 30px;
@@ -85,6 +85,12 @@ img.user-icon {
 .nav-bar .item:hover{
     background-color: #3f91dd;
 }
+
+.navbar-toggler {
+    color: white; /* Cambia el color a lo que necesites */
+    border: 1px solid white;
+}
+
 /*FORMULARIO Y MAPA*/
 
 .contacto {
@@ -191,7 +197,7 @@ legend {
 
 .mapa iframe {
     width: 100%;
-    height: 350px;
+    height: 95%;
     border-radius: 2%;
     margin-bottom: 20px;
 }
