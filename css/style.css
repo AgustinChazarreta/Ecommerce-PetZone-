@@ -44,7 +44,7 @@ h1{
 }
 
 /* Icono de Usuario */
-.fi {
+.user-info .fi {
     font-size: 24px; /* Ajusta el tamaño */
     color: #fff; /* Cambia el color */
 }
@@ -91,6 +91,9 @@ img.user-icon {
     border: 1px solid white;
 }
 
+.productos {
+    color: #000;
+}
 
 /*CAROUSEL*/
 .carousel-item {
@@ -98,6 +101,47 @@ img.user-icon {
     height: 350px;
 }
 
+/*SECTION CATEGORIA-MASCOTA*/
+.categoria-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.titulo-categoria {
+    justify-content: center;
+    color: #3f91dd;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.mascota-container {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 50px;
+    width: 80%;
+    padding: 50px;
+}
+
+.mascota {
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 3px #1e4972 solid;
+    background: linear-gradient(to top, #222, #368cdf);
+}
+
+.mascota:hover {
+    box-shadow: 0 0 25px #0008;
+}
+
+.mascota img {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    
+}
 
 /*FORMULARIO Y MAPA*/
 
@@ -223,6 +267,30 @@ legend {
 }
 
 /*Agrego media Query*/
+@media (min-width: 1200px) {
+    .categoria-mascota {
+        height: 300px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    
+    .titulo-categoria {
+        font-size: 30px;
+    }
+
+    .mascota-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }   
+}
+
+@media (min-width: 800px){
+    .mascota-container {
+        grid-template-columns: repeat(2,auto);
+    }
+} 
 
 @media (max-width: 600px) {
     h1 {
