@@ -33,13 +33,13 @@ body {
 
 h1{
     color: white;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 800;
     padding-top: 5px;
 }
 
 .user-info {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
 }
 
@@ -56,12 +56,6 @@ img.logo-icon {
     border-color: #fff;
     border-style: solid;
     border-radius: 100%;
-}
-
-img.user-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
 }
 
 /*NAV-BAR*/
@@ -106,7 +100,7 @@ img.user-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0;
+    margin: 35px 0;
 }
 
 .titulo-categoria {
@@ -118,10 +112,10 @@ img.user-icon {
 
 .mascota-container {
     display: grid;
-    grid-template-columns: 1;
-    gap: 50px;
-    width: 80%;
-    padding: 50px;
+    grid-template-columns: repeat(5,auto);
+    gap: 8px;
+    width: 100%;
+    padding: 20px;
 }
 
 .mascota {
@@ -137,18 +131,19 @@ img.user-icon {
 }
 
 .mascota img {
-    display: flex;
-    height: 200px;
-    width: 200px;
-    
+    height: 100px;
+    width: 100px;
 }
 
 /*FORMULARIO Y MAPA*/
 
 .contacto {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
-    margin-top: 25px;
+    margin: 15px;
+
 }
 
 h2 {
@@ -162,8 +157,9 @@ h2 {
 
 .formulario {
     background: transparent;
+    width: 80%;
     padding: 10px 30px;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 0 0 25px #0008;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -239,7 +235,8 @@ legend {
     flex-direction: column;
     background: transparent;
     padding: 10px 30px;
-    max-width: 600px;
+    max-width: 800px;
+    width: 80%;
     box-shadow: 0 0 25px #0008;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -267,11 +264,30 @@ legend {
 }
 
 /*Agrego media Query*/
-@media (min-width: 1200px) {
-    .categoria-mascota {
-        height: 300px;
-        justify-content: center;
-        justify-content: space-evenly;
+@media (min-width: 1000px) {
+    .container-web {
+        padding: 0 60px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    
+    .user-info {
+        font-size: 16px;
+    }
+    
+    .contacto {
+        flex-direction: row;
+        align-items: stretch;
+        margin: 15px;
+    }
+    
+    .formulario {
+        max-width: 600px;
+    }
+    
+    .mapa {
+        max-width: 600px;
     }
     
     .titulo-categoria {
@@ -279,56 +295,14 @@ legend {
     }
 
     .mascota-container {
-        display: flex;
-        flex-direction: row;
         justify-content: space-evenly;
-        width: 100%;
+    }
+    
+    .mascota img {
+        height: 200px;
+        width: 200px;
     }   
-}
-
-@media (min-width: 800px){
-    .mascota-container {
-        grid-template-columns: repeat(2,auto);
-    }
-} 
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 35px;
-    }
-
-    .user-info {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .contacto {
-        flex-direction: column;
-        align-items: center;
-        margin: 15px;
-    }
-
-    .formulario {
-        max-width: 800px;
-        width: 80%;
-    }
-
-    .mapa {
-        max-width: 800px;
-        width: 80%;
-    }
-
-    body {
-        min-width: 570px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .contacto {
-        flex-direction: row;
-        margin: 15px;
-    }
+    
 }
 
 /*FOOTER*/
