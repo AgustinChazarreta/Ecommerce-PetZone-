@@ -22,7 +22,7 @@ body {
 }
 
 .item {
-    align-items: center;
+    align-items: stretch;
     display: flex;
     flex-direction: row;
     gap: 10px; /* Espacio entre los elementos dentro de .item */
@@ -64,17 +64,18 @@ img.logo-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
     padding: 8px 20px;
     background-color: #2f7bc3;
 }
 
 .nav-bar .item {
     color: white;
-    padding: 18px 15px !important;
+    padding: 8px 15px !important;
     text-decoration: none;
     max-height: 45px;
     border-radius: 30px;
-    margin: 8px 5px;
+    margin: 5px 5px;
 }
 
 .nav-bar .item:hover{
@@ -187,23 +188,22 @@ img.logo-icon {
 
 .mascota {
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
-    border: 2px #1e4972 solid;
+    border: 1px #1e4972 solid;
     background: linear-gradient(to top, #222, #368cdf);
 }
 
 .mascota:hover {
-    box-shadow: 0 0 25px #0008;
+    box-shadow: 0 0 10px #0008;
 }
 
 .mascota img {
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
 }
 
 /*FORMULARIO Y MAPA*/
-
 .contacto {
     display: flex;
     flex-direction: column;
@@ -228,6 +228,8 @@ h2 {
     box-shadow: 0 0 25px #0008;
     margin: 20px 0 40px 0;
     border-radius: 2%;
+    display: flex;
+    flex-direction: column;
 }
 
 .form_input {
@@ -288,7 +290,7 @@ legend {
     border: 1px solid #007bff;
     border-radius: 8px;
     cursor: pointer;
-    text-align: center;
+    align-self: flex-end;
 }
 
 .mapa {
@@ -315,7 +317,7 @@ legend {
 
 .mapa a {
     display: flex;
-    margin-bottom: 10px;
+    margin: 10px 2px;
     align-items: center;
     font-size: 12px;
 }
@@ -327,32 +329,42 @@ legend {
 }
 
 /*Agrego media Query*/
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
+    /*HEADER*/
     .container-web {
-        padding: 0 60px;
+        padding: 50px 70px 40px 70px;
     }
     h1 {
         font-size: 50px;
     }
+
+    .item {
+        gap: 15px; /* Espacio entre los elementos dentro de .item */
+    }
     
     .user-info {
-        font-size: 16px;
+        font-size: 18px;
+    }
+
+    .user-info .fi {
+        font-size: 25px;
     }
     
-    .contacto {
-        flex-direction: row;
-        align-items: stretch;
-        margin: 15px;
+    img.logo-icon {
+        width: 60px;
+        height: 60px;
+    }
+    /*NAV-BAR*/
+    .nav-bar {
+        font-size: 17px;
+    }
+
+    /*CAROUSEL*/
+    .carousel-item {
+    height: 300px;
     }
     
-    .formulario {
-        max-width: 600px;
-    }
-    
-    .mapa {
-        max-width: 600px;
-    }
-    
+    /*SECCIÓN CATEGORIA-MASCOTA*/
     .titulo-categoria {
         font-size: 30px;
     }
@@ -360,12 +372,134 @@ legend {
     .mascota-container {
         justify-content: space-evenly;
     }
+
+    .mascota {
+        border: 3px #1e4972 solid;
+    }
     
     .mascota img {
         height: 200px;
         width: 200px;
-    }   
+    }
     
+    .mascota:hover {
+        box-shadow: 0 0 15px #0008;
+    }
+
+    /*SECCIÓN PRODUCTOS (con GRID)*/
+    .productos {
+        padding: 80px 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 450px);
+        gap: 75px;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .card-brand {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+
+    .card-body .btn {
+        font-size: 15px;
+    }
+
+
+
+
+
+    /*FORMULARIO Y MAPA*/
+    .contacto {
+        flex-direction: row;
+        align-items: stretch;
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    
+    .formulario {
+        max-width: 550px;
+    }
+    
+    .form_input {
+        padding: 8px 15px;
+    }
+    
+    input, textarea {
+        padding: 10px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    textarea {
+        height: 100px;
+    }
+    
+    label {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .checkbox {
+        width: 16px;
+        height: 16px;
+    }
+    
+    fieldset {
+        padding: 15px 15px;
+        margin: 18px 5px;
+    }
+    
+    legend {
+        font-size: 16px;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .boton {
+        width: 90px;
+        padding: 8px 20px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .mapa {
+        padding: 10px 25px;
+        max-width: 550px;
+    }
+    
+    .mapa iframe {
+        max-height: 75%;
+        border-radius: 5%;
+        margin: 0;
+    }
+    
+    .mapa a {
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    
+    .mapa i {
+        font-size: 30px;
+    }
 }
 
 /*FOOTER*/
