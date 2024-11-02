@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProyectoFinal-TalentoTech</title>
+    <title> PetZone</title>
+    <link rel="icon" href="img/PetZone.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="container-web">
+        <div class="header-logo item">
+            <img src="img/PetZone.png" alt="Logo de la web PetZone" class="logo-icon">
+            <h1>PetZone</h1>
+        </div>
+        <div class="user-info item">
+            <i class="fi fi-rr-circle-user"></i>
+            <span>Agustín Chazarreta</span>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg nav-bar">
+        <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fi fi-rr-menu-burger"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link item" aria-current="page" href="index.html"><i class="fi fi-rr-home"></i>Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item" href="#">Reseñas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item" href="html/index-form.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item" href="#"><i class="fi fi-rr-shopping-cart"></i>Carrito</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://picsum.photos/1280/720?random=1" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://picsum.photos/1280/720?random=2"  class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://picsum.photos/1280/720?random=3"  class="d-block w-100" alt="...">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <main class="productos">
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/id/250/800/300" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="card-descrip">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-brand">Marca</p>
+                        <p class="card-text">Breve descripción del producto</p>
+                    </div>
+                    <p class="card-price">$ 99.999</p>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/248/800/300" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 2</h5>
+                    <h4 class="card-brand">Marca</h4>
+                    <p class="card-text">Breve descripción del producto</p>
+                    <p class="card-price">$ 99.999</p>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/220/800/300" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 3</h5>
+                    <h4 class="card-brand">Marca</h4>
+                    <p class="card-text">Breve descripción del producto</p>
+                    <p class="card-price">$ 99.999</p>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/230/800/300" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 4</h5>
+                    <h4 class="card-brand">Marca</h4>
+                    <p class="card-text">Breve descripción del producto</p>
+                    <p class="card-price">$ 99.999</p>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
     
+
+    <section class="categoria-mascota">
+        <div class="titulo-categoria">Alimento para todo tipo de Mascota</div>
+        <div class="mascota-container">
+            <div class="mascota"><img src="img/perro.png" alt=""></div>
+            <div class="mascota"><img src="img/hamster.png" alt=""></div>
+            <div class="mascota"><img src="img/loro.png" alt=""></div>
+            <div class="mascota"><img src="img/gato.png" alt=""></div>
+            <div class="mascota"><img src="img/pez.png" alt=""></div>
+        </div>
+    </section>
+
+    <footer>
+        <h4>PetZone</h4>
+        <div class="info-footer">
+            <p>PetZone es una tienda en línea dedicada a ofrecer productos de calidad para el cuidado y bienestar de las mascotas. Aquí, los amantes de los animales encuentran desde alimentos y juguetes hasta accesorios y productos de salud, cuidadosamente seleccionados para perros, gatos y otras mascotas.</p>
+        </div>
+        <div class="ultimo-footer">© 2024 Copyright - Chazarreta Agustín</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
