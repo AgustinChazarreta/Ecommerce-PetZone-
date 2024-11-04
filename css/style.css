@@ -10,106 +10,227 @@ body {
 }
 
 /*HEADER*/
-.container {
+.container-web {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding-right: 10px;
     background-color: #368cdf;
     color: #fff;
+    width: 100%;
+    height: 60px;
 }
 
 .item {
-    align-items: center;
+    align-items: stretch;
     display: flex;
     flex-direction: row;
     gap: 10px; /* Espacio entre los elementos dentro de .item */
 }
 
 .header-logo {
-    gap: 25px; /* Espacio entre los elementos dentro de .header-logo */
-    height: 100px;
+    gap: 10px; /* Espacio entre los elementos dentro de .header-logo */
 }
 
 h1{
     color: white;
-    font-size: 50px;
+    font-size: 23px;
     font-weight: 800;
+    padding-top: 5px;
 }
 
 .user-info {
-    font-size: 16px;
+    display: flex;
+    font-size: 10px;
     font-weight: 500;
 }
 
 /* Icono de Usuario */
-.fi {
-    font-size: 24px; /* Ajusta el tamaño */
+.user-info .fi {
+    font-size: 18px; /* Ajusta el tamaño */
     color: #fff; /* Cambia el color */
 }
 
 img.logo-icon {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     margin-left: 15px;
-    border-color: #fff;
-    border-style: solid;
+    border: 2px solid white;
     border-radius: 100%;
 }
 
-img.user-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
 /*NAV-BAR*/
-
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    font-size: 12px;
+    padding: 8px 20px;
     background-color: #2f7bc3;
 }
 
 .nav-bar .item {
     color: white;
-    padding: 18px 15px;
+    padding: 8px 15px !important;
     text-decoration: none;
     max-height: 45px;
     border-radius: 30px;
-    margin: 8px 5px;
+    margin: 5px 5px;
 }
 
 .nav-bar .item:hover{
     background-color: #3f91dd;
 }
-/*FORMULARIO Y MAPA*/
 
+.navbar-toggler {
+    color: white; /* Cambia el color a lo que necesites */
+    border: 1px solid white;
+    height: 32px;
+}
+
+/*CAROUSEL*/
+.carousel-item {
+    width: 100%;
+    height: 180px;
+}
+
+/*SECCIÓN PRODUCTOS (con GRID)*/
+.productos {
+    padding: 30px 0;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 175px);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 30px 10px;
+}
+
+.card {
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 15px #0003;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1; /*Para que el card-body ocupe el espacio disponible*/
+    display: flex;
+    flex-direction: column; /*Alinear el contenido verticalmente*/
+    justify-content: space-between; /*Distribuir el espacio entre el contenido y el botón*/
+}
+
+.card-descrip{
+    display: flex;           /* Usar Flexbox para la distribución */
+    flex-direction: column; /* Alinear los elementos en columna */
+}
+
+.card-brand , .card-title{
+    margin: 0;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-brand {
+    font-size: 16px;
+    color: #1e4972;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+.card-price {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.card-body .btn {
+    align-self: flex-end; /* Alinear el botón al final del card-body */
+    background-color: #007bff;
+    font-size: 13px;
+}
+
+/*SECCIÓN CATEGORIA-MASCOTA*/
+.categoria-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-categoria {
+    color: #3f91dd;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    padding: 0 2px;
+}
+
+.mascota-container {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    width: 100%;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.mascota {
+    overflow: hidden;
+    border-radius: 80px;
+    cursor: pointer;
+    border: 1px #1e4972 solid;
+    background: linear-gradient(to top, #222, #368cdf);
+}
+
+.mascota:hover {
+    box-shadow: 0 0 10px #0008;
+}
+
+.mascota img {
+    height: 60px;
+    width: 60px;
+}
+
+/*SECCIÓN FORMULARIO Y MAPA*/
 .contacto {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
-    margin-top: 25px;
+    margin: 5px;
 }
 
 h2 {
     margin: 0;
-    margin-bottom: 10px;
     font-weight: 500;
-    font-size: 1.4em;
-    padding: 10px;
+    font-size: 17px;
+    padding-top: 8px;
     color: #000;
 }
 
 .formulario {
     background: transparent;
-    padding: 10px 30px;
-    max-width: 600px;
+    width: 90%;
+    padding: 10px 20px;
+    max-width: 800px;
     box-shadow: 0 0 25px #0008;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px 0 40px 0;
     border-radius: 2%;
+    display: flex;
+    flex-direction: column;
 }
 
 .form_input {
@@ -117,71 +238,69 @@ h2 {
     color: #000;
 }
 
-input, textarea, select {
+input, textarea {
     width: 100%;
     box-sizing: border-box;
-    margin: 8px;
+    margin: 2px;
     padding: 6px 8px;
     border: 1px solid #555;
     box-shadow: 0 0 15px #0003;
     background: transparent;
     border-radius: 4px;
     color: #000;
-}
-
-option {
-    background-color: #000;
-    
+    font-size: 10px;
 }
 
 textarea {
     min-width: 100%;
     resize: none;
-    min-height: 100px;
+    height: 50px;
 }
 
 label {
-    font-size: 0.88em;
+    font-size: 12px;
     line-height: 2;
 }
 
 .checkbox {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 fieldset {
     border-radius: 5px;
     border: 1px solid #666;
-    padding: 10px 50px 10px 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 20px 0;
 }
 
 legend {
-    padding: 0 6px;
     color: #000;
-    font-size: larger;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 600;
 }
 
 .boton {
     display: flex;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 10px;
+    font-size: 12px;
     font-weight: 500;
     color: #fff;
     background-color: #007bff; /* Azul Bootstrap */
     border: 1px solid #007bff;
     border-radius: 8px;
     cursor: pointer;
-    text-align: center;
+    align-self: flex-end;
 }
 
 .mapa {
     display: flex;
     flex-direction: column;
     background: transparent;
-    padding: 10px 30px;
-    max-width: 600px;
+    padding: 10px 15px;
+    max-width: 800px;
+    width: 90%;
     box-shadow: 0 0 25px #0008;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -191,61 +310,242 @@ legend {
 
 .mapa iframe {
     width: 100%;
-    height: 350px;
-    border-radius: 2%;
-    margin-bottom: 20px;
+    height: 95%;
+    max-height: 250px;
+    border-radius: 10%;
+    margin: 15px 0;
 }
 
 .mapa a {
     display: flex;
-    margin-bottom: 10px;
+    margin: 10px 2px;
     align-items: center;
+    font-size: 12px;
 }
 
 .mapa i {
-    font-size: 30px; /* Ajusta el tamaño según necesites */
+    font-size: 25px; /* Ajusta el tamaño según necesites */
     color: #000; /* Color para el ícono en la sección de mapa */
     margin-right: 10px;
 }
 
+/*SECCIÓN RESEÑAS*/
+.resenias {
+    padding-bottom: 20px;
+}
+
+.resenias h2{
+    font-size: 25px;
+    padding: 20px 60px;
+    font-weight: 800;
+    color: #3f91dd;
+}
+
+.resenias-grid{
+    display: grid;
+    grid-template-columns: 260px;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 40px;
+}
+
+.resenias .card{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.resenias .card .card-img-top {
+    width: 120px;
+    height: 120px;
+    align-self: center;
+    border-radius: 100%;
+}
+
 /*Agrego media Query*/
-
-@media (max-width: 600px) {
+@media (min-width: 600px) {
+    /*HEADER*/
+    .container-web {
+        padding: 50px 70px 40px 70px;
+    }
     h1 {
-        font-size: 35px;
+        font-size: 50px;
     }
 
+    .item {
+        gap: 15px; /* Espacio entre los elementos dentro de .item */
+    }
+    
     .user-info {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .contacto {
-        flex-direction: column;
-        align-items: center;
-        margin: 15px;
+        font-size: 18px;
     }
 
-    .formulario {
-        max-width: 800px;
-        width: 80%;
+    .user-info .fi {
+        font-size: 25px;
+    }
+    
+    img.logo-icon {
+        width: 60px;
+        height: 60px;
+    }
+    /*NAV-BAR*/
+    .nav-bar {
+        font-size: 17px;
     }
 
-    .mapa {
-        max-width: 800px;
-        width: 80%;
+    /*CAROUSEL*/
+    .carousel-item {
+    height: 300px;
+    }
+    
+    /*SECCIÓN CATEGORIA-MASCOTA*/
+    .titulo-categoria {
+        font-size: 30px;
     }
 
-    body {
-        min-width: 570px;
+    .mascota-container {
+        justify-content: space-evenly;
     }
-}
 
-@media (min-width: 1200px) {
+    .mascota {
+        border: 3px #1e4972 solid;
+    }
+    
+    .mascota img {
+        height: 200px;
+        width: 200px;
+    }
+    
+    .mascota:hover {
+        box-shadow: 0 0 15px #0008;
+    }
+
+    /*SECCIÓN PRODUCTOS (con GRID)*/
+    .productos {
+        padding: 80px 0;
+    }
+
+    .productos-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        gap: 40px;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .productos-grid .card-title {
+        font-size: 28px;
+    }
+
+    .productos-grid .card-brand {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+
+    .card-body .btn {
+        font-size: 15px;
+    }
+
+    /*FORMULARIO Y MAPA*/
     .contacto {
         flex-direction: row;
+        align-items: stretch;
         margin: 15px;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 800;
+        color: #3f91dd;
+    }
+    
+    .formulario {
+        max-width: 550px;
+    }
+    
+    .form_input {
+        padding: 8px 15px;
+    }
+    
+    input, textarea {
+        padding: 10px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    textarea {
+        height: 100px;
+    }
+    
+    label {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .checkbox {
+        width: 16px;
+        height: 16px;
+    }
+    
+    fieldset {
+        padding: 15px 15px;
+        margin: 18px 5px;
+    }
+    
+    legend {
+        font-size: 16px;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .boton {
+        width: 90px;
+        padding: 8px 20px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .mapa {
+        padding: 10px 25px;
+        max-width: 550px;
+    }
+    
+    .mapa iframe {
+        max-height: 75%;
+        border-radius: 5%;
+        margin: 0;
+    }
+    
+    .mapa a {
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    
+    .mapa i {
+        font-size: 30px;
+        color: #3f91dd;
+    }
+
+    /*SECCIÓN RESEÑAS*/
+    .resenias{
+        padding: 30px;
+    }
+
+    .resenias h2{
+        font-size: 40px;
+        padding: 20px 120px;
+    }
+
+    .resenias-grid{
+        grid-template-columns: repeat(2,420px);
+        gap: 60px;
     }
 }
 
