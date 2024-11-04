@@ -99,7 +99,7 @@ img.logo-icon {
     padding: 30px 0;
 }
 
-.grid {
+.productos-grid {
     display: grid;
     grid-template-columns: 230px;
     grid-template-rows: auto;
@@ -108,6 +108,7 @@ img.logo-icon {
 }
 
 .card {
+    color: #000;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
@@ -203,7 +204,7 @@ img.logo-icon {
     width: 45px;
 }
 
-/*FORMULARIO Y MAPA*/
+/*SECCIÓN FORMULARIO Y MAPA*/
 .contacto {
     display: flex;
     flex-direction: column;
@@ -328,6 +329,39 @@ legend {
     margin-right: 10px;
 }
 
+/*SECCIÓN RESEÑAS*/
+.resenias {
+    padding-bottom: 20px;
+}
+
+.resenias h2{
+    font-size: 25px;
+    padding: 20px 60px;
+    font-weight: 800;
+    color: #3f91dd;
+}
+
+.resenias-grid{
+    display: grid;
+    grid-template-columns: 260px;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 40px;
+}
+
+.resenias .card{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.resenias .card .card-img-top {
+    width: 120px;
+    height: 120px;
+    align-self: center;
+    border-radius: 100%;
+}
+
 /*Agrego media Query*/
 @media (min-width: 600px) {
     /*HEADER*/
@@ -391,7 +425,7 @@ legend {
         padding: 80px 0;
     }
 
-    .grid {
+    .productos-grid {
         display: grid;
         grid-template-columns: repeat(2, 450px);
         gap: 75px;
@@ -401,11 +435,11 @@ legend {
         padding: 25px;
     }
 
-    .card-title {
+    .productos-grid .card-title {
         font-size: 28px;
     }
 
-    .card-brand {
+    .productos-grid .card-brand {
         font-size: 20px;
     }
 
@@ -416,10 +450,6 @@ legend {
     .card-body .btn {
         font-size: 15px;
     }
-
-
-
-
 
     /*FORMULARIO Y MAPA*/
     .contacto {
@@ -499,6 +529,21 @@ legend {
     
     .mapa i {
         font-size: 30px;
+    }
+
+    /*SECCIÓN RESEÑAS*/
+    .resenias{
+        padding: 30px;
+    }
+
+    .resenias h2{
+        font-size: 40px;
+        padding: 20px 120px;
+    }
+
+    .resenias-grid{
+        grid-template-columns: repeat(2,420px);
+        gap: 60px;
     }
 }
 
