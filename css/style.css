@@ -215,10 +215,10 @@ img.logo-icon {
 
 h2 {
     margin: 0;
-    font-weight: 500;
-    font-size: 17px;
-    padding-top: 8px;
-    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+    padding-top: 5px;
+    color: #3f91dd;
 }
 
 .formulario {
@@ -325,7 +325,7 @@ legend {
 
 .mapa i {
     font-size: 25px; /* Ajusta el tamaño según necesites */
-    color: #000; /* Color para el ícono en la sección de mapa */
+    color: #3f91dd; /* Color para el ícono en la sección de mapa */
     margin-right: 10px;
 }
 
@@ -362,6 +362,64 @@ legend {
     border-radius: 100%;
 }
 
+/*FOOTER*/
+
+footer {
+    font-family: "Montserrat";
+    color: #fff;
+    background: linear-gradient(to top, #222, #368cdf);
+    padding-top: 20px; /* Controla el espacio superior e inferior del footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Elimina el espacio entre h4 y .info-footer */
+}
+
+h4 {
+    margin: 0; /* Elimina el margen predeterminado del h4 */
+    font-size: 20px;
+}
+
+.primer-footer {
+    display: flex;
+    font-size: 10px;
+    padding: 0 15px;
+}
+
+.info-footer {
+    margin: 0; /* Asegura que no haya margen superior o inferior */
+    padding: 5px; /* Solo aplica padding lateral si es necesario */
+    text-align: center; /* Centra el texto dentro de .info-footer */
+    text-wrap: balance;
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    color: white;
+    margin: 2px 8px;
+}
+
+.redes-sociales i {
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.ultimo-footer{
+    padding: 5px;
+    background-color: #40463c;
+    text-align: center;
+    width: 100%; /* Abarca toda la pantalla */
+    font-size: 10px;
+}
+
 /*Agrego media Query*/
 @media (min-width: 600px) {
     /*HEADER*/
@@ -371,7 +429,7 @@ legend {
     h1 {
         font-size: 50px;
     }
-
+    
     .item {
         gap: 15px; /* Espacio entre los elementos dentro de .item */
     }
@@ -379,7 +437,7 @@ legend {
     .user-info {
         font-size: 18px;
     }
-
+    
     .user-info .fi {
         font-size: 25px;
     }
@@ -419,22 +477,22 @@ legend {
     .mascota:hover {
         box-shadow: 0 0 15px #0008;
     }
-
+    
     /*SECCIÓN PRODUCTOS (con GRID)*/
     .productos {
         padding: 80px 0;
     }
-
+    
     .productos-grid {
         display: grid;
         grid-template-columns: repeat(4, 280px);
         gap: 40px;
     }
-
+    
     .card-body {
         padding: 25px;
     }
-
+    
     .productos-grid .card-title {
         font-size: 28px;
     }
@@ -442,7 +500,7 @@ legend {
     .productos-grid .card-brand {
         font-size: 20px;
     }
-
+    
     .card-text {
         font-size: 15px;
     }
@@ -450,7 +508,7 @@ legend {
     .card-body .btn {
         font-size: 15px;
     }
-
+    
     /*FORMULARIO Y MAPA*/
     .contacto {
         flex-direction: row;
@@ -460,7 +518,6 @@ legend {
 
     h2 {
         font-size: 25px;
-        font-weight: 800;
         color: #3f91dd;
     }
     
@@ -530,7 +587,6 @@ legend {
     
     .mapa i {
         font-size: 30px;
-        color: #3f91dd;
     }
 
     /*SECCIÓN RESEÑAS*/
@@ -547,38 +603,37 @@ legend {
         grid-template-columns: repeat(2,420px);
         gap: 60px;
     }
-}
 
-/*FOOTER*/
+    /*FOOTER*/
+    .primer-footer {
+        flex-direction: column;
+    }    
+    
+    .info-footer {
+        flex-direction: column;
+        font-size: 12px;
+    }
 
-footer {
-    font-family: "Montserrat";
-    color: #fff;
-    background: linear-gradient(to top, #222, #368cdf);
-    padding-top: 20px; /* Controla el espacio superior e inferior del footer */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0; /* Elimina el espacio entre h4 y .info-footer */
-}
+    .redes-sociales{
+        font-size: 15px;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 0 10px 0;
+    }
 
-h4 {
-    margin: 0; /* Elimina el margen predeterminado del h4 */
-    font-size: 20px;
-}
+    .redes-sociales a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        margin-right: 30px;
+    }
 
-.info-footer {
-    margin: 0; /* Asegura que no haya margen superior o inferior */
-    padding: 0 30px; /* Solo aplica padding lateral si es necesario */
-    text-align: center; /* Centra el texto dentro de .info-footer */
-    text-wrap: balance;
-    font-size: 12px;
-}
+    .redes-sociales i {
+        margin-right: 5px;
+        font-size: 15px;
+    }
 
-.ultimo-footer{
-    padding: 5px;
-    background-color: #40463c;
-    text-align: center;
-    width: 100%; /* Abarca toda la pantalla */
-    font-size: 12px;
+    .ultimo-footer{
+        font-size: 12px;
+    }
 }
