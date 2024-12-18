@@ -30,6 +30,7 @@ body {
 
 .header-logo {
     gap: 10px; /* Espacio entre los elementos dentro de .header-logo */
+    text-decoration: none;
 }
 
 h1{
@@ -88,6 +89,14 @@ img.logo-icon {
     height: 32px;
 }
 
+#carrito-cantidad {
+    font-size: 12px;
+    background-color: #ee2f2f;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 /*CAROUSEL*/
 .carousel-item {
     width: 100%;
@@ -96,7 +105,7 @@ img.logo-icon {
 
 /*SECCIÓN PRODUCTOS (con GRID)*/
 .productos {
-    padding: 30px 0;
+    padding-top: 5px;
 }
 
 .productos-grid {
@@ -105,6 +114,15 @@ img.logo-icon {
     grid-template-rows: auto;
     justify-content: center;
     gap: 30px 10px;
+}
+
+#productos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 280px);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 30px 10px;
+    padding-bottom: 30px;
 }
 
 .card {
@@ -118,20 +136,13 @@ img.logo-icon {
 
 .card-img-top {
     width: 100%;
-    height: auto;
+    height: 250px;
 }
 
 .card-body {
-    padding: 20px;
-    flex-grow: 1; /*Para que el card-body ocupe el espacio disponible*/
+    padding: 18px;
     display: flex;
     flex-direction: column; /*Alinear el contenido verticalmente*/
-    justify-content: space-between; /*Distribuir el espacio entre el contenido y el botón*/
-}
-
-.card-descrip{
-    display: flex;           /* Usar Flexbox para la distribución */
-    flex-direction: column; /* Alinear los elementos en columna */
 }
 
 .card-brand , .card-title{
@@ -145,22 +156,64 @@ img.logo-icon {
 .card-brand {
     font-size: 16px;
     color: #1e4972;
+    font-weight: 500;
 }
 
-.card-text {
-    font-size: 12px;
+.card-description {
+    font-size: 14px;
+    max-height: 60px; /* Altura inicial limitada */
+    overflow: hidden; /* Oculta el contenido que sobrepase la altura */
+    transition: max-height 0.5s ease; /* Transición suave para max-height */
+}
+
+.card-description.expanded {
+    max-height: 300px; /* Altura máxima para la descripción expandida */
 }
 
 .card-price {
     font-size: 25px;
     font-weight: 600;
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-body .btn {
     align-self: flex-end; /* Alinear el botón al final del card-body */
     background-color: #007bff;
     font-size: 13px;
+    border: none;
+}
+
+#prev-btn, #next-btn {
+    background-color: #2571c2;
+    border: none;
+}
+
+
+#page-info {
+    color: #3f91dd;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.toast-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4cbe67;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 1; /* Inicialmente visible */
+    transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
+}
+
+.toast-message.fade-out {
+    opacity: 0; /* Hace que el mensaje sea invisible */
 }
 
 /*SECCIÓN CATEGORIA-MASCOTA*/
@@ -343,7 +396,7 @@ legend {
 
 .resenias-grid{
     display: grid;
-    grid-template-columns: 260px;
+    grid-template-columns: 400px;
     grid-template-rows: auto;
     justify-content: center;
     gap: 40px;
@@ -362,6 +415,51 @@ legend {
     border-radius: 100%;
 }
 
+/*CARRITO DE COMPRAS*/
+#carrito {
+    padding: 0 30px 50px 30px;
+    min-height: 50vh; /* Asegura que ocupe al menos toda la altura de la ventana */
+}
+
+.text-end h4 {
+    font-weight: 800;
+    font-size: 25px;
+    color: #3f91dd;
+    margin-bottom: 25px;
+}
+
+#limpiar-carrito {
+    align-self: flex-end; /* Alinear el botón al final del card-body */
+    background-color: #3f91dd;
+    color: white;
+    font-size: 13px;
+    border: none;
+}
+
+#finalizar-compra{
+    align-self: flex-end; /* Alinear el botón al final del card-body */
+    background-color: #ee4242;
+    color: white;
+    font-size: 13px;
+    border: none;
+}
+
+#limpiar-carrito:hover{
+    background-color: #007bff;
+}
+
+#finalizar-compra:hover{
+    background-color: red;
+}
+
+.custom-button {
+    background-color: #007bff; /* Botón azul */
+    color: #fff;              /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+} 
 /*FOOTER*/
 
 footer {
@@ -451,6 +549,11 @@ h4 {
         font-size: 17px;
     }
 
+    #carrito-cantidad {
+        font-size: 15px;
+        align-self: center;
+    }
+
     /*CAROUSEL*/
     .carousel-item {
     height: 300px;
@@ -479,35 +582,53 @@ h4 {
     }
     
     /*SECCIÓN PRODUCTOS (con GRID)*/
-    .productos {
-        padding: 80px 0;
+    
+    #productos-container {
+        display: grid;
+        grid-template-columns: repeat(4, 290px);
+        gap: 40px 0;
+        padding-bottom: 30px;
+        justify-content: stretch;
     }
     
-    .productos-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 280px);
-        gap: 40px;
+    .card {
+        width: 255px;
+    }
+    
+    .productos {
+        padding: 80px 0;
     }
     
     .card-body {
         padding: 25px;
     }
-    
-    .productos-grid .card-title {
-        font-size: 28px;
-    }
 
-    .productos-grid .card-brand {
-        font-size: 20px;
-    }
     
-    .card-text {
-        font-size: 15px;
-    }
-
     .card-body .btn {
         font-size: 15px;
     }
+    
+    .card-body .card-price {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    #prev-btn, #next-btn {
+        font-size: 20px;
+        margin: 0 30px;
+    }
+    
+    #page-info {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
+    .toast-message {
+        bottom: 20px;
+        right: 40px;
+        font-size: 18px;
+    }
+
     
     /*FORMULARIO Y MAPA*/
     .contacto {
@@ -593,15 +714,28 @@ h4 {
     .resenias{
         padding: 30px;
     }
-
+    
     .resenias h2{
         font-size: 40px;
         padding: 20px 120px;
     }
-
+    
     .resenias-grid{
-        grid-template-columns: repeat(2,420px);
-        gap: 60px;
+        grid-template-columns: repeat(3,350px);
+        gap: 50px;
+    }
+    
+    .resenias-grid .card {
+        width: 90%;
+    }
+
+        /*CARRITO DE COMPRAS*/
+    #limpiar-carrito {
+        font-size: 18px;
+    }
+
+    #finalizar-compra{
+        font-size: 18px;
     }
 
     /*FOOTER*/
@@ -637,3 +771,4 @@ h4 {
         font-size: 12px;
     }
 }
+
