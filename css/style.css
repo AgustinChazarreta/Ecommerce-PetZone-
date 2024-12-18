@@ -164,6 +164,9 @@ img.logo-icon {
 .card-price {
     font-size: 25px;
     font-weight: 600;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-body .btn , #prev-btn, #next-btn {
@@ -178,6 +181,25 @@ img.logo-icon {
     font-size: 15px;
     font-weight: 600;
     text-align: center;
+}
+
+.toast-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4cbe67;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 1; /* Inicialmente visible */
+    transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
+}
+
+.toast-message.fade-out {
+    opacity: 0; /* Hace que el mensaje sea invisible */
 }
 
 /*SECCIÓN CATEGORIA-MASCOTA*/
@@ -379,6 +401,51 @@ legend {
     border-radius: 100%;
 }
 
+/*CARRITO DE COMPRAS*/
+#carrito {
+    padding: 0 30px 50px 30px;
+    min-height: 50vh; /* Asegura que ocupe al menos toda la altura de la ventana */
+}
+
+.text-end h4 {
+    font-weight: 800;
+    font-size: 25px;
+    color: #3f91dd;
+    margin-bottom: 25px;
+}
+
+#limpiar-carrito {
+    align-self: flex-end; /* Alinear el botón al final del card-body */
+    background-color: #3f91dd;
+    color: white;
+    font-size: 13px;
+    border: none;
+}
+
+#finalizar-compra{
+    align-self: flex-end; /* Alinear el botón al final del card-body */
+    background-color: #ee4242;
+    color: white;
+    font-size: 13px;
+    border: none;
+}
+
+#limpiar-carrito:hover{
+    background-color: #007bff;
+}
+
+#finalizar-compra:hover{
+    background-color: red;
+}
+
+.custom-button {
+    background-color: #007bff; /* Botón azul */
+    color: #fff;              /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+} 
 /*FOOTER*/
 
 footer {
@@ -655,22 +722,3 @@ h4 {
     }
 }
 
-
-.toast-message {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    font-size: 14px;
-    opacity: 1; /* Inicialmente visible */
-    transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
-}
-
-.toast-message.fade-out {
-    opacity: 0; /* Hace que el mensaje sea invisible */
-}

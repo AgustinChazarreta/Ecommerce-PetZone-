@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Variables de control
     let currentPage = 1;
-    const limit = 20;
+    const limit = 15;
     let totalProductos = 0;
 
 
@@ -37,9 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card-body">
                     <h5 class="card-title">${product.title}</h5>
                     <p class="card-brand">${product.brand}</p>
-                    <p class="card-text">${product.description}</p>
-                    <p class="card-price">$ ${product.price}</p>
-                    <button type="button" class="btn btn-primary">Agregar</button>
+                    <p class="card-price">$ ${product.price} <button type="button" class="btn btn-primary">Agregar</button></p>
                 </div>
             </div>
             `;
