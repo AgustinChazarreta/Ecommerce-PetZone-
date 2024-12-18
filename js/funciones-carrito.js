@@ -47,22 +47,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Botón para finalizar la compra con SweetAlert
     document.getElementById("finalizar-compra").addEventListener("click", () => {
-        Swal.fire({
-            title: "Compra Procesada",
-            text: "Se ha procesado la compra #1234",
-            icon: "success",
-            confirmButtonText: "Aceptar",
-            customClass: {
-                confirmButton: "custom-button",
-            },
-        });
-
-        // Limpiar el carrito después de finalizar la compra
-        localStorage.removeItem("cart");
-
-        // Redirigir al inicio después de 4 segundos
-        setTimeout(() => {
-            window.location.href = "../index.html";
-        }, 4000);
+        if (total === 0) {
+            // Mostrar un mensaje si el carrito está vacío
+            Swal.fire({
+                title: "Carrito vacío",
+                text: "No puedes finalizar la compra, tu carrito está vacío.",
+                confirmButtonText: "Aceptar",
+                icon: "error",
+                customClass: {
+                    confirmButton: "custom-button",
+                },
+            });
+        } else { 
+            Swal.fire({
+                title: "Compra Procesada",
+                text: "Muchas gracias por elegirnos!!",
+                confirmButtonText: "Aceptar",
+                customClass: {
+                    confirmButton: "custom-button",
+                },
+                imageUrl: "../img/PetZone.png",
+                imageWidth: 100,
+                imageHeight: 100,
+            });
+            // Limpiar el carrito después de finalizar la compra
+            localStorage.removeItem("cart");
+            // Redirigir al inicio después de 4 segundos
+            setTimeout(() => {
+                window.location.href = "../index.html";
+            }, 4000);
+        }
     });
 });

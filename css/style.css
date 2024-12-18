@@ -713,19 +713,19 @@ h4 {
     .resenias{
         padding: 30px;
     }
-
+    
     .resenias h2{
         font-size: 40px;
         padding: 20px 120px;
     }
-
+    
     .resenias-grid{
-        grid-template-columns: repeat(2,450px);
-        gap: 60px;
+        grid-template-columns: repeat(3,350px);
+        gap: 50px;
     }
-
+    
     .resenias-grid .card {
-        width: 80%;
+        width: 90%;
     }
 
         /*CARRITO DE COMPRAS*/
