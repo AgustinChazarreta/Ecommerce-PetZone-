@@ -88,6 +88,14 @@ img.logo-icon {
     height: 32px;
 }
 
+#carrito-cantidad {
+    font-size: 12px;
+    background-color: #ee2f2f;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 /*CAROUSEL*/
 .carousel-item {
     width: 100%;
@@ -131,16 +139,9 @@ img.logo-icon {
 }
 
 .card-body {
-    padding: 20px;
-    flex-grow: 1; /*Para que el card-body ocupe el espacio disponible*/
+    padding: 18px;
     display: flex;
     flex-direction: column; /*Alinear el contenido verticalmente*/
-    justify-content: space-between; /*Distribuir el espacio entre el contenido y el botón*/
-}
-
-.card-descrip{
-    display: flex;           /* Usar Flexbox para la distribución */
-    flex-direction: column; /* Alinear los elementos en columna */
 }
 
 .card-brand , .card-title{
@@ -157,14 +158,20 @@ img.logo-icon {
     font-weight: 500;
 }
 
-.card-text {
-    font-size: 12px;
+.card-description {
+    font-size: 14px;
+    max-height: 60px; /* Altura inicial limitada */
+    overflow: hidden; /* Oculta el contenido que sobrepase la altura */
+    transition: max-height 0.5s ease; /* Transición suave para max-height */
+}
+
+.card-description.expanded {
+    max-height: 300px; /* Altura máxima para la descripción expandida */
 }
 
 .card-price {
     font-size: 25px;
     font-weight: 600;
-    padding-top: 10px;
     display: flex;
     justify-content: space-between;
 }
