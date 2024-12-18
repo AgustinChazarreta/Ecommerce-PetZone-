@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Variables de control
     let currentPage = 1;
-    const limit = 15;
+    const limit = 16;
     let totalProductos = 0;
 
     function fetchProductos(page) {
