@@ -103,6 +103,41 @@ img.logo-icon {
     height: 180px;
 }
 
+.envios-gratis {
+    position: relative;
+    width: 100%;
+    background-color: #4cbe67; /* Color de fondo */
+    padding: 15px;
+    color: white; /* Color del texto */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: flex; /* Usamos Flexbox */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; /* Oculta cualquier contenido fuera del contenedor */
+}
+
+.envios-gratis span {
+    position: absolute;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    animation: moverTexto 8s linear infinite; /* Aplica la animación */
+}
+
+.envios-gratis span .envio {
+    color: rgb(245, 241, 23);
+}
+
+@keyframes moverTexto {
+    0% {
+        right: -180%; /* Empieza fuera de la pantalla por la derecha */
+    }
+    100% {
+        right: 100%; /* Termina fuera de la pantalla por la izquierda */
+    }
+}
+
+
 /*SECCIÓN PRODUCTOS (con GRID)*/
 .productos {
     padding-top: 5px;
@@ -558,6 +593,41 @@ h4 {
     .carousel-item {
     height: 300px;
     }
+
+    .envios-gratis {
+        position: relative;
+        width: 100%;
+        background-color: #4cbe67; /* Color de fondo */
+        padding: 15px;
+        color: white; /* Color del texto */
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        display: flex; /* Usamos Flexbox */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        overflow: hidden; /* Oculta cualquier contenido fuera del contenedor */
+    }
+    
+    .envios-gratis span {
+        position: absolute;
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        animation: moverTexto 10s linear infinite; /* Aplica la animación */
+    }
+    
+    .envios-gratis span .envio {
+        color: rgb(245, 241, 23);
+    }
+    
+    @keyframes moverTexto {
+        0% {
+            right: -40%; /* Empieza fuera de la pantalla por la derecha */
+        }
+        100% {
+            right: 100%; /* Termina fuera de la pantalla por la izquierda */
+        }
+    }
+    
     
     /*SECCIÓN CATEGORIA-MASCOTA*/
     .titulo-categoria {
@@ -596,7 +666,7 @@ h4 {
     }
     
     .productos {
-        padding: 80px 0;
+        padding-bottom: 50px;
     }
     
     .card-body {

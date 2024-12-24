@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Variables de control
     let currentPage = 1;
-    const limit = 16;
+    const limit = 8;
     let totalProductos = 0;
 
     function fetchProductos(page) {
         const skip = (page - 1) * limit;
 
-        fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
+        fetch(`https://dummyjson.com/products/category/groceries?limit=${limit}&skip=${skip}`)
             .then((response) => response.json())
             .then((data) => {
                 totalProductos = data.total;
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <img src="${product.thumbnail}" class="card-img-top" alt="${product.title}">
                         <div class="card-body">
                             <h5 class="card-title">${product.title}</h5>
-                            <p class="card-brand">${product.brand}</p>
+                            <p class="card-brand">${product.brand||"Marca"} </p>
                             <p class="card-description">Breve descripción del producto...</p>
                             <p class="card-price">$ ${product.price} <button type="button" class="btn btn-primary">Agregar</button></p>
                         </div>
